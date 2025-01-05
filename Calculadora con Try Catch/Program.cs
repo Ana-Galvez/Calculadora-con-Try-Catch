@@ -33,9 +33,9 @@ namespace Calculadora_con_Try_Catch
                             Console.WriteLine($"El resultado es: {num1 * num2}");
                             break;
                         case "/":
-                            if (num2 == 0) Console.WriteLine("No se puede dividir por 0");
+                            if(num2 ==0) Console.WriteLine("No se puede dividir por 0");
                             else Console.WriteLine($"El resultado es: {num1 / num2}");
-                            break;
+                        break;
                         default:
                             Console.WriteLine("Signo inválido");
                             break;
@@ -44,7 +44,7 @@ namespace Calculadora_con_Try_Catch
                 catch (FormatException ex)
                 {
                     Console.WriteLine(ex.Message);
-                }
+                }                
                 Console.WriteLine("¿Desea hacer otra cuenta? si/no");
                 salir=Console.ReadLine().ToLower();
             } while (salir == "si");
